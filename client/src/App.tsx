@@ -1,15 +1,23 @@
-import './App.css';
-import MainPage from './MainPage';
+import MainPage from '@pages/MainPage.tsx';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <>
-      <div className="mt-8 w-full bg-white rounded-8">
-        <MainPage />
-      </div>
-      <span className={'line-clamp-2 truncate break-all leading-normal'}>
-        ㅁㅇㄹ
-      </span>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div className="mt-8 w-full">
+              <MainPage />
+            </div>
+          }
+        />
+        <Route
+          path="/study"
+          element={<div className="mt-8 w-full">공부</div>}
+        />
+      </Routes>
     </>
   );
 }
