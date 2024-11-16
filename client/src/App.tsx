@@ -8,7 +8,7 @@ function App() {
         <Route
           path="/"
           element={
-            <div className="mt-8 w-full">
+            <div className="p-8 w-screen max-w-screen-lg mx-auto my-0 h-full flex justify-center items-center">
               <MainPage />
             </div>
           }
