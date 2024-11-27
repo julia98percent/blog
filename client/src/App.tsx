@@ -1,5 +1,6 @@
 import MainPage from '@pages/MainPage.tsx';
 import { Routes, Route } from 'react-router-dom';
+import MemoListPage from '@pages/MemoListPage';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
             </div>
           }
         />
+        <Route path="/memoList" element={<MemoListPage />} />
         <Route
           path="/study"
           element={<div className="mt-8 w-full">공부</div>}
