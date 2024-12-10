@@ -1,10 +1,12 @@
 import MainPage from '@pages/MainPage';
 import AboutMePage from '@pages/AboutMePage';
 import { Routes, Route } from 'react-router-dom';
+import NavigationBar from '@components/NavigationBar';
 
 function App() {
   return (
     <>
+      <NavigationBar />
       <Routes>
         <Route
           path="/"
