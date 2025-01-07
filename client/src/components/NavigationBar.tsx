@@ -6,8 +6,9 @@ import CloseIcon from '@assets/close.svg?react';
 const NAVI_INFO = [
   { name: '클라이언트', url: 'client' },
   { name: '서버', url: 'server' },
-  { name: '생각', url: 'thoughts' },
-  { name: '기타', url: 'ect' },
+  { name: '문제풀이', url: 'problem-solving' },
+  // { name: '생각', url: 'thoughts' },
+  // { name: '기타', url: 'ect' },
   { name: '율무?', url: 'about-me' },
 ];
 
@@ -62,11 +63,14 @@ const NavigationBar = () => {
   return (
     <nav
       className={
-        'flex flex-row items-center justify-between sticky top-0 bg-white px-[40px] py-2.5 border-b border-black '
+        'flex flex-row items-center justify-between sticky top-0 bg-[#f7f6f0] px-[40px] py-2.5 border-b border-[#c8c8c8] '
       }
     >
       <Link to={'/'}>
-        <h1 className="margin-0">{import.meta.env.VITE_BLOG_NAME}</h1>
+        <h1 className="inline-block margin-0">
+          {import.meta.env.VITE_BLOG_NAME}
+        </h1>
+        <span> 📝</span>
       </Link>
       <ul className="flex">
         {NAVI_INFO.map(({ name, url }) => (

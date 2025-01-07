@@ -11,7 +11,7 @@ function App() {
         <Route
           path="/"
           element={
-            <div className="p-8 pt-0 w-screen max-w-screen-lg mx-auto my-0 h-full flex justify-center items-center">
+            <div className="p-8 pt-0 w-screen max-w-screen-lg mx-auto my-0 h-full">
               <MainPage />
             </div>
           }

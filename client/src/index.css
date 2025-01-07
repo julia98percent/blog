@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
 @tailwind base;
 @layer base {
   body {
     @apply text-black;
-    font-family: 'Nanum Gothic', system-ui, sans-serif;
-    background: #f8efe4;
+    font-family: 'Noto Sans Korean', system-ui, sans-serif;
+    background: #f7f6f0;
   }
 }
 
@@ -16,7 +16,7 @@
     @apply h-[80svh];
   }
   h2 {
-    @apply text-3xl font-normal mb-2;
+    @apply text-3xl font-normal;
     font-family: 'Nanum Myeongjo', system-ui, sans-serif;
   }
   .highlighting {
