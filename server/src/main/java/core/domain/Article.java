@@ -51,4 +51,9 @@ public class Article {
     this.tags = tags;
     this.createdDate = LocalDateTime.now();
   }
+
+  public void update(String title, String content) {
+    this.title = title;
+    this.content = content;
+  }
 }
