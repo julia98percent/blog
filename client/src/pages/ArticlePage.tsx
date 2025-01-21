@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import { getArticleFromId } from '../apis/get';
 import { useState, useEffect } from 'react';
 import { formatToYYYYMMDD } from '../utils/date';
+import { parseTags } from '../utils/article';
+import Tag from '@components/Tag';
 
 const ArticlePage = () => {
   const { id } = useParams();
@@ -27,6 +29,10 @@ const ArticlePage = () => {
           <Markdown className="prose dark:prose-invert">
             {articleData.content}
           </Markdown>
+
+          {parseTags(articleData.tags).map((item) => (
+            <Tag text={item} />
+          ))}
         </div>
       </div>
     );
