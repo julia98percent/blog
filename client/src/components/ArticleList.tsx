@@ -14,11 +14,13 @@ const ArticleList = ({ metadataList }: { metadataList: ArticleCardType[] }) => {
     <div className="flex flex-col divide-y divide-c-orange dark:divide-c-orange/40 gap-1">
       {metadataList.map(({ id, title, subtitle, createdAt }) => {
         return (
-          <Link to={`/post/${id}`}>
-            <div>
+          <Link to={`/post/${id}`} key={`post-${id}`}>
+            <div className="hover:opacity-60">
               <div className="mt-2">{formatToYYYYMMDD(createdAt)}</div>
               <h2>{title}</h2>
-              <h4 className="mb-2 text-gray-600">{subtitle}</h4>
+              <h4 className="mb-2 text-gray-600 dark:text-gray-100/40">
+                {subtitle}
+              </h4>
             </div>
           </Link>
         );

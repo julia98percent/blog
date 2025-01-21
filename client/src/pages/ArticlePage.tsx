@@ -18,7 +18,7 @@ const ArticlePage = () => {
     return (
       <div className="flex flex-col items-center my-6">
         <div className="md:w-[720px] w-[80vw]">
-          <div className="text-center mb-8">
+          <div className="text-center mb-16">
             <p className="text-gray-600 mb-2">
               {formatToYYYYMMDD(articleData.createdDate)}
             </p>
@@ -26,12 +26,13 @@ const ArticlePage = () => {
               {articleData.title}
             </h2>
           </div>
-          <Markdown className="prose dark:prose-invert">
+
+          <Markdown className="prose dark:prose-invert max-w-none">
             {articleData.content}
           </Markdown>
 
-          {parseTags(articleData.tags).map((item) => (
-            <Tag text={item} />
+          {parseTags(articleData.tags).map((tag) => (
+            <Tag text={tag} key={`tag-${tag}`} />
           ))}
         </div>
       </div>

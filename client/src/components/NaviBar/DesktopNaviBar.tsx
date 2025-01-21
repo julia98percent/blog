@@ -16,7 +16,7 @@ const DesktopNaviBar = ({ emoji }: { emoji: String }) => {
       </Link>
       <ul className="flex">
         {NAVI_INFO.map(({ name, url }) => (
-          <li className="group">
+          <li className="group" key={`menu-${name}`}>
             <Link to={url}>
               <span className="px-[10px] group-hover:highlight">{name}</span>
             </Link>
