@@ -11,7 +11,7 @@ export type ArticleCardType = {
 
 const ArticleList = ({ metadataList }: { metadataList: ArticleCardType[] }) => {
   return (
-    <div className="flex flex-col divide-y divide-divide-orange dark:divide-divide-orange/40 gap-1">
+    <div className="flex flex-col divide-y divide-c-orange dark:divide-c-orange/40 gap-1">
       {metadataList.map(({ id, title, subtitle, createdAt }) => {
         return (
           <Link to={`/post/${id}`}>

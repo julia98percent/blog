@@ -5,7 +5,7 @@ const DesktopNaviBar = ({ emoji }: { emoji: String }) => {
   return (
     <nav
       className={
-        'bg-light-bg dark:bg-dark-bg flex flex-row items-center justify-between sticky top-0 px-[4vw] h-[50px] border-b border-dark-bg/30 dark:border-light-bg/30'
+        'bg-b-light dark:bg-b-dark flex flex-row items-center justify-between sticky top-0 px-[4vw] h-[50px] border-b border-b-dark/30 dark:border-b-light/30'
       }
     >
       <Link to={'/'}>
@@ -18,7 +18,7 @@ const DesktopNaviBar = ({ emoji }: { emoji: String }) => {
         {NAVI_INFO.map(({ name, url }) => (
           <li className="group">
             <Link to={url}>
-              <span className="px-[10px] group-hover:highlighting">{name}</span>
+              <span className="px-[10px] group-hover:highlight">{name}</span>
             </Link>
           </li>
         ))}

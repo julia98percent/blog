@@ -4,13 +4,32 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "light-font": "#202020",
-        "light-bg": "#f7f6f0",
-        "dark-font": "#e2e2e2",
-        "dark-divide": "#fe8c59",
-        "dark-bg": "#232221",
-        "divide-orange": "#e96724",
+        "f-light": "#202020",
+        "f-dark": "#e2e2e2",
+        "b-light": "#f7f6f0",
+        "b-dark": "#232221",
+        "c-orange": "#e96724",
+        "c-yellow": "#f0c475",
+        "c-green": "#abc97b",
+        "c-brown": "#95714f",
+        "c-blue": "#458dd1",
       },
+      typography: ({ theme }) => ({
+        DEFAULT: {
+          css: {
+            blockquote: {
+              "border-inline-start-color": theme("colors.c-green/0.8"),
+            },
+            a: {
+              color: theme("colors.c-blue"),
+              "font-style": "italic",
+              "&:hover": {
+                opacity: "60%",
+              },
+            },
+          },
+        },
+      }),
     },
   },
   plugins: [require("@tailwindcss/typography")],

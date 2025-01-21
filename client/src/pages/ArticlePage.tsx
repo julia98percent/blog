@@ -20,7 +20,7 @@ const ArticlePage = () => {
             <p className="text-gray-600 mb-2">
               {formatToYYYYMMDD(articleData.createdDate)}
             </p>
-            <h2 className="text-3xl font-semibold border-b border-divide-orange dark:border-divide-orange/40 pb-2">
+            <h2 className="text-3xl font-semibold border-b border-c-orange dark:border-c-orange/40 pb-2">
               {articleData.title}
             </h2>
           </div>

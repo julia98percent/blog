@@ -4,20 +4,32 @@
 @tailwind base;
 @layer base {
   body {
-    @apply text-light-font dark:text-dark-font bg-light-bg dark:bg-dark-bg;
+    @apply text-f-light dark:text-f-dark bg-b-light dark:bg-b-dark;
     font-family: 'Noto Sans Korean', system-ui, sans-serif;
   }
-}
-
-@tailwind components;
-@layer components {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-b-dark/40 dark:bg-b-light/40;
+    border-radius: 10px;
+  }
+  code {
+    @apply rounded-md break-words bg-c-yellow/40;
+  }
+  blockquote {
+    border-inline-start-color: red;
   }
   h2 {
     @apply text-2xl font-medium;
     font-family: 'Nanum Myeongjo', system-ui, sans-serif;
   }
-  .highlighting {
-    @apply border-b-4 border-yellow-300 bg-yellow-200/50 duration-300;
+}
+
+@tailwind components;
+@layer components {
+  .highlight {
+    @apply border-b-4 border-yellow-300/50 bg-yellow-200/50 duration-300;
   }
 }
 

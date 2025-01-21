@@ -11,7 +11,7 @@ const MobileNaviBar = ({ emoji }: { emoji: String }) => {
 
   return (
     <nav
-      className={`bg-light-bg dark:bg-dark-bg sticky top-0 overflow-y-hidden px-[4vw] py-2.5 border-b border-dark-bg/30 dark:border-light-bg/30  ${
+      className={`bg-b-light dark:bg-b-dark sticky top-0 overflow-y-hidden px-[4vw] py-2.5 border-b border-b-dark/30 dark:border-b-light/30  ${
         isOpen ? 'h-auto' : 'h-[50px]'
       }`}
     >
@@ -24,20 +24,18 @@ const MobileNaviBar = ({ emoji }: { emoji: String }) => {
         </Link>
         <button onClick={handleIsOpenChange}>
           {isOpen ? (
-            <CloseIcon className="stroke-dark-bg dark:stroke-light-bg" />
+            <CloseIcon className="stroke-b-dark dark:stroke-b-light" />
           ) : (
-            <MenuIcon className="stroke-dark-bg dark:stroke-light-bg" />
+            <MenuIcon className="stroke-b-dark dark:stroke-b-light" />
           )}
         </button>
       </div>
       <div>
         <ul className="text-center">
           {NAVI_INFO.map(({ name, url }) => (
-            <li className="group pb-1">
+            <li className="group pb-1" key={`menu-${name}`}>
               <Link to={url}>
-                <span className="px-[10px] group-hover:highlighting">
-                  {name}
-                </span>
+                <span className="px-[10px] group-hover:highlight">{name}</span>
               </Link>
             </li>
           ))}
