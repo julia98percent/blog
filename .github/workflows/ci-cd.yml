@@ -1,0 +1,37 @@
+name: CI/CD
+
+on:
+  push:
+    # branches:
+    #   - main
+
+jobs:
+  client:
+    # if: contains(github.event.commits[*].modified, 'client/')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+
+      - name: Install dependencies
+        run: |
+          echo "Installing dependencies... 👷"
+          cd client
+          yarn install
+
+      - name: Build client
+        run: |
+          echo "Building client... 🧱"
+          cd client
+          yarn build
+
+      - name: Deploy client
+        run: |
+          echo "Deploying client... 🏠"
+          cd client
+          yarn deploy
