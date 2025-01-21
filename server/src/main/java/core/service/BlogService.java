@@ -39,11 +39,7 @@ public class BlogService {
       articles = blogRepository.findByCategory(category);
     }
 
-    // Article 리스트를 ArticleCard 리스트로 변환
-    return articles.stream().map(
-            article -> ArticleCard.builder().title(article.getTitle()).category(article.getCategory())
-                .subtitle(article.getSubtitle()).createdDate(article.getCreatedDate()).build())
-        .collect(Collectors.toList());
+    return articles.stream().map(ArticleCard::fromArticle).collect(Collectors.toList());
   }
 
   public Article findById(long id) {

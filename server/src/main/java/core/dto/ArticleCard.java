@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ArticleCard {
 
+  private Long id;
   private LocalDateTime createdDate;
   private String title;
   private String content;
@@ -18,8 +19,9 @@ public class ArticleCard {
 
 
   @Builder
-  public ArticleCard(String title, String content, String category, String subtitle,
+  public ArticleCard(Long id, String title, String content, String category, String subtitle,
       LocalDateTime createdDate) {
+    this.id = id;
     this.title = title;
     this.content = content;
     this.category = category;
@@ -29,6 +31,7 @@ public class ArticleCard {
 
   public static ArticleCard fromArticle(Article article) {
     return ArticleCard.builder().title(article.getTitle()).category(article.getCategory())
-        .subtitle(article.getSubtitle()).createdDate(article.getCreatedDate()).build();
+        .subtitle(article.getSubtitle()).createdDate(article.getCreatedDate()).id(article.getId())
+        .build();
   }
 }
