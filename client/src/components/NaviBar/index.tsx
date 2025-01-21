@@ -8,7 +8,7 @@ export const NAVI_INFO = [
   { name: '문제풀이', url: 'problem-solving' },
   // { name: '생각', url: 'thoughts' },
   { name: '기타', url: 'ect' },
-  { name: '율무?', url: 'about-me' },
+  // { name: '율무?', url: 'about-me' },
 ];
 
 const MOBILE_SIZE = 640;
